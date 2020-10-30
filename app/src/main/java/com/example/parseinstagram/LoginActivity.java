@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
@@ -18,6 +19,7 @@ public class LoginActivity extends Activity {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
+    private ImageView logo;
 
     @Override
     protected  void onCreate(Bundle savedInstanceState){
@@ -27,9 +29,12 @@ public class LoginActivity extends Activity {
 //        if(ParseUser.getCurrentUser()!=null){
 //            goMainActivity();
 //        }
+
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        logo = findViewById(R.id.logo);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
